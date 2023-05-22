@@ -1,0 +1,11 @@
+- The researcher should check the error message after running the code, in this case, "TypeError: 'range' object does not support item assignment". 
+
+- The bugs are that "RangeObject" does not allow indexed assignment, i.e. it needs to be "s=list(range(...))", and that "j" needs to be an integer, i.e. "j=int((m*m-3)/2)".
+
+- It would be better to use an autoformatter (e.g. black) and a linter (e.g. pylint and/or flake8) before starting working on a software project in a team to avoid a large amount of format changes in the future code review.
+
+- The researcher might want to remove the duplicated "s[j]=0". And both while loops could be replaced by "for ... in range(...)" loops (with "i" and "j" as the loop variable). "while" is rather intended for more dynamic situations. That would significantly reduce the number of lines.
+
+- A more elegant and faster solution would be to reach for numpy and fancy indexing (attached in the sub-directory).
+
+

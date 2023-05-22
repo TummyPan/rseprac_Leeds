@@ -1,0 +1,6 @@
+The researcher could use the following pipe:
+
+$ wc values* | sort -n | head -n 10
+
+We can find out that only "values44" has fewer data. It uses the "word count" command to the number of lines, words, and characters in all the files starting with "values" in this directory. Then, it sorts the results numerically and shows the first 10 lines in the terminal. The number "10" can be adjusted if there are more than 10 files having fewer than 100 values. If the researcher wants to output the result in a .txt file rather than viewing it in the terminal. He can add "> data-check.txt" at the end of the pipe and it will output the result to a file called "data-check.txt".
+

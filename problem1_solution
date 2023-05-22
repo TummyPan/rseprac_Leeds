@@ -1,0 +1,14 @@
+To rename all the files from .csv to .dat, the researcher could run the following loop in the terminal to rename the extension.
+
+$ for i in *.csv; do mv "$i" "${i%.csv}.dat"; done
+
+It is advantageous to use the shell to rename a large number of files, which is much faster than doing it manually in GUI. Using a "For-loop" (starting with "for") is the quickest way to loop over (for example "i" is the variable in this case, it can be variable names but I recommend using something meaningful) all the files (*.csv is a wildcard to include all the files ending with .csv). "do" indicates the start of job execution list, "mv" is the command to either move or rename a file in the shell, here, it replaces every .csv files with .dat extension. The loop is closed by "done". The ";" is the separator and this is also an example to write a loop in one line. Usually, you will use the following format.
+
+$ for i in *.csv
+> do
+>     mv "$i" "${i%.csv}.dat"
+> done
+
+You may notice that the shell prompt changes from "$" to ">" and back again as typing in the loop. Additionally, indentation is not required, but it aids readability.
+
+
